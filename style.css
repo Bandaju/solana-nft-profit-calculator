@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 100%;
+}
+
+body {
+  background-color: #5F6F94;
+}
+
+.container {
+  width: 1920px;
+}
+
+.main-box {
+  width: 40rem;
+  height: 40rem;
+  background-color: #fff;
+  display: flex;
+  margin:0 auto;
+}
+
+.input-area {
+  margin: 8rem auto;
+  text-align: center;
+}
+
+.bsLabel {
+  font-size: 1.9rem;
+  font-weight: 400;
+}
+
+.radioText {
+  font-size: 1.9rem;
+  margin-top: 2rem;
+}
+
+.radioPick {
+  font-size: 1.9rem;
+}
+
+button {
+  margin-top: 2rem;
+  padding: 1.5rem;
+}
+
+.resultMod {
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin: 3rem;
+  font-size: 7rem;
+}

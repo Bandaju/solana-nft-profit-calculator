@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Solana NFT Profit Calculator</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Solana NFT Profit Calculator</h1>
+    <div class="main-box">
+      <div class="input-area">
+        <form name="calculateForm">
+          <label class="bsLabel" for="bprice">Buy Price:</label>
+          <input type="text" id="bprice" name="bprice"><br>
+          <label class="bsLabel" for="sprice">Sell Price:</label>
+          <input type="text" id="sprice" name="sprice"><br>
+          <p class="radioText">Please select creator fee:</p>
+          <div>
+            <input type="radio" id="feeChoice1" name="fee" value=5>
+            <label class="radioPick" for="feeChoice1">5</label>
+
+            <input type="radio" id="feeChoice2" name="fee" value=7>
+            <label class="radioPick" for="feeChoice2">7</label>
+
+            <input type="radio" id="feeChoice3" name="fee" value=8>
+            <label class="radioPick" for="feeChoice3">8</label>
+
+            <input type="radio" id="feeChoice4" name="fee" value=10>
+            <label class="radioPick" for="feeChoice4">10</label>
+          </div>
+        </form>
+        <button onclick="myFunction()">Click me</button>
+        <div class="result">
+          <p class="resultMod"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
