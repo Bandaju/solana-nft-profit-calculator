@@ -47,5 +47,17 @@ function myFunction() {
       document.querySelector(".result p").style.color = "purple";
       document.querySelector(".result p").innerHTML = finalTable;
     }
+  } else if (document.getElementById("feeChoice5").checked) {
+    rate_value = document.getElementById("feeChoice5").value;
+    sellValue = document.getElementById("sprice").value.replace(',', '.');
+    buyValue = document.getElementById("bprice").value.replace(',', '.');
+    finalTable = sellValue * 0.98 - buyValue;
+    if (finalTable >= 0) {
+      document.querySelector(".result p").style.color = "green";
+      document.querySelector(".result p").innerHTML = finalTable;
+    } else if (finalTable < 0) {
+      document.querySelector(".result p").style.color = "purple";
+      document.querySelector(".result p").innerHTML = finalTable;
+    }
   }
 }
