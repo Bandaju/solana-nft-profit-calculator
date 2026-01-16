@@ -1,52 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Solana NFT Profit Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Structure Analyzer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="container">
+        <header>
+            <h1>Site Structure Analyzer</h1>
+            <p class="subtitle">Web sitelerinin tasarım ve yapısını analiz edin</p>
+        </header>
 
-  <div class="container">
-    <h1>Solana NFT Profit Calculator</h1>
-    <div class="main-box">
-      <div class="input-area">
-        <form name="calculateForm">
-          <label class="bsLabel" for="bprice">Buy Price:</label>
-          <input type="text" id="bprice" name="bprice"><br>
-          <label class="bsLabel" for="sprice">Sell Price:</label>
-          <input type="text" id="sprice" name="sprice"><br>
-          <p class="radioText">Please select creator fee:</p>
-          <div>
-            <input type="radio" id="feeChoice5" name="fee" value=0>
-            <label class="radioPick" for="feeChoice5">0</label>
+        <main>
+            <div class="input-section">
+                <div class="input-wrapper">
+                    <input
+                        type="url"
+                        id="urlInput"
+                        placeholder="https://example.com"
+                        required
+                    >
+                    <button id="analyzeBtn" onclick="analyzeWebsite()">
+                        <span class="btn-text">Analiz Et</span>
+                        <span class="btn-loader" style="display: none;"></span>
+                    </button>
+                </div>
+                <p class="hint">Analiz etmek istediğiniz web sitesinin tam URL'sini girin</p>
+            </div>
 
-            <input type="radio" id="feeChoice1" name="fee" value=5>
-            <label class="radioPick" for="feeChoice1">5</label>
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
 
-            <input type="radio" id="feeChoice2" name="fee" value=7>
-            <label class="radioPick" for="feeChoice2">7</label>
+            <div id="resultsSection" class="results-section" style="display: none;">
+                <div class="results-header">
+                    <h2>Analiz Sonuçları</h2>
+                    <div class="results-actions">
+                        <button class="btn-secondary" onclick="copyJSON()">JSON Kopyala</button>
+                        <button class="btn-secondary" onclick="downloadJSON()">JSON İndir</button>
+                    </div>
+                </div>
 
-            <input type="radio" id="feeChoice3" name="fee" value=8>
-            <label class="radioPick" for="feeChoice3">8</label>
+                <div class="tabs">
+                    <button class="tab active" data-tab="overview" onclick="switchTab('overview')">Genel Bakış</button>
+                    <button class="tab" data-tab="structure" onclick="switchTab('structure')">Yapı</button>
+                    <button class="tab" data-tab="design" onclick="switchTab('design')">Tasarım</button>
+                    <button class="tab" data-tab="seo" onclick="switchTab('seo')">SEO</button>
+                    <button class="tab" data-tab="json" onclick="switchTab('json')">JSON</button>
+                </div>
 
-            <input type="radio" id="feeChoice4" name="fee" value=10>
-            <label class="radioPick" for="feeChoice4">10</label>
-          </div>
-        </form>
-        <button onclick="myFunction()">Click me</button>
-        <div class="result">
-          <p class="resultMod"></p>
-        </div>
-      </div>
+                <div id="tabContent" class="tab-content">
+                    <!-- Tab içerikleri JavaScript ile doldurulacak -->
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Site Structure Analyzer &copy; 2025</p>
+        </footer>
     </div>
-  </div>
 
-  <script src="app.js"></script>
+    <script src="analyzer.js"></script>
 </body>
-
 </html>
